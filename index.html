@@ -1,0 +1,35 @@
+1.	Connect with jQ script
+2.	Connect with firebase script
+3.	Connect js file to html page
+
+4.	Bootstrap
+	a.	Jumbo
+		i.	Head + subhead
+	b.	Panel (Current Train Schedule)
+		i.	5: Train name | destination | Frequency(min) |Next Arrival |Minutes Away
+	c.	Form (Add Train)
+		i.	4+Submit btn: Train Name | Destination | First Train Time (HH:mm-military time) |Frequency (min)
+5.	Set form #ids 
+6.	Initialize firebase
+	a.	Js 
+	b.	Html
+7.	var database = firebase.database();
+8.	capture  button click (submit
+	a.	run event.preventDefalut(); inside click function
+	9.	Set vars for form #id w/ “” ( “”??)  == $(“#the ids).val().trim();
+	a.	train
+	b.	destination
+	c.	firstTrainTime
+	d.	frequency
+
+10.	<Test, test, test all the time>
+11.	Push (instead of set) the data:
+	a.	Database.ref().set({
+	b.	Train: train,
+	c.	Destination: destination,
+	d.	nextArrival: firstTrainTime, 
+	e.	frequency: frequency
+	f.	})
+
+12.	Set the vars 
+
