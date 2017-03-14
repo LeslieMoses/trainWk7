@@ -100,7 +100,7 @@
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
@@ -113,7 +113,7 @@
 //#edit the following.. .. .. .. ..  .. .. .. .. .. .. .. .. 
 // Add each train's data into the table
   $("#displayInfo").append("<tr><td>" + displayTrain + "</td><td>" + displayDestination + "</td><td>" +
-  displayFrequency + "</td><td>" + "#displayNextArrival" + "</td><td>" + "#displayMinutesAway" + "</td></tr>");
+  displayFrequency + "</td><td>" + nextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
  
 
  });//close of database function
