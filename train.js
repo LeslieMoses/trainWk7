@@ -83,16 +83,43 @@
  		console.log(childSnapshot.val().firstTrain);
  		console.log(childSnapshot.val().frequency);
 
+  	//storing everything in variable
+ 	  var displayTrain = childSnapshot.val().train;
+	  var displayDestination = childSnapshot.val().destination;
+	  var displayFirstTrain = childSnapshot.val().firstTrain;
+	  var displayFrequency = childSnapshot.val().frequency;
+
+	  	console.log(displayTrain);
+ 		console.log(displayDestination);
+ 		console.log(displayFirstTrain);
+ 		console.log(displayFrequency);
+
+ 	// set var and start calculating
+
+// create vars: displayNextArrival	displayMinutesAway
+
+ 	// add train data into table
 
 
- 	});//close of database function
+//#edit the following.. .. .. .. ..  .. .. .. .. .. .. .. .. 
+// Add each train's data into the table
+  $("#displayInfo").append("<tr><td>" + displayTrain + "</td><td>" + displayDestination + "</td><td>" +
+  displayFrequency + "</td><td>" + "#displayNextArrival" + "</td><td>" + "#displayMinutesAway" + "</td></tr>");
+ 
+
+ });//close of database function
 
  
 // ...................
-// 	var tFrequency = ?;
+// 	var tFrequency = displayFrequency;
 // // Minute Until Train
 //     var tMinutesTillTrain = tFrequency - tRemainder;
 //     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+// Time apart (remainder)
+//how do i get the diffTime?
+//     var tRemainder = diffTime % tFrequency;
+//     console.log(tRemainder);
 
 // // Next Train
 //     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
