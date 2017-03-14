@@ -95,6 +95,11 @@
  		console.log(displayFrequency);
 
  	// set var and start calculating
+ 	//     // Minute Until Train
+    var tMinutesTillTrain = displayFrequency - ((moment().diff(moment(moment(displayFirstTrain, "hh:mm").subtract(1, "years")), "minutes")) % displayFrequency);
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+    
 
 // create vars: displayNextArrival	displayMinutesAway
 
@@ -164,3 +169,17 @@
 //     // Next Train
 //     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
 //     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+
+
+/*-------practice------------practice---------practice--------------practice-------------*/
+/*trying it*/
+//     // Minute Until Train
+//     var tMinutesTillTrain = displayFrequency - ((moment().diff(moment(moment(displayFirstTrain, "hh:mm").subtract(1, "years")), "minutes")) % displayFrequency);
+//     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+//     // Next Train
+//     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+//     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+var tRemainder = diffTime % tFrequency;
